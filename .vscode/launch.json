@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "name": "My Startup Debug",
+      "request": "launch",
+      "type": "pwa-msedge",
+      "url": "http://localhost:3000" // Provide your project's url to finish configuring
+    }
+  ]
+}

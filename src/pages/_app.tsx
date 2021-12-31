@@ -1,6 +1,12 @@
 import { AppProps } from 'next/app';
+import { ThemeProvider } from 'styled-components';
+import { light } from '../themes/light';
 import '@/styles/global.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider theme={light}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
