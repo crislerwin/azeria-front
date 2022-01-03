@@ -1,26 +1,22 @@
-import styled from 'styled-components';
+import api from '@/services/api';
+import { useEffect, useState } from 'react';
+
+import { SimpleTable, IUser } from '@/components/SimpleTable';
 
 export default function Home() {
+  const [users, setUsers] = useState<IUser[]>([]);
+  useEffect(() => {
+    async function fetchData() {
+      await api.get(`/`).then((response) => {
+        setUsers(response.data.results);
+      });
+    }
+    fetchData();
+  }, []);
+
   return (
-    <Container>
-      <Title>Welcome With Styled Components</Title>
-    </Container>
+    <>
+      <SimpleTable users={users} />
+    </>
   );
 }
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const Title = styled.h1`
-  font-size: 14px;
-  font-weight: bold;
-`;
-
-const Header = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
