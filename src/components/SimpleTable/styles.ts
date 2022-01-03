@@ -23,13 +23,6 @@ const TableRow = styled.tr`
   border-color: inherit;
 `;
 
-const HeaderRow = styled.tr`
-  display: block;
-  vertical-align: inherit;
-  border-color: inherit;
-  background-color: #f5f5f5;
-`;
-
 const TableData = styled.td`
   padding: 6px;
   border: 1px solid #ddd;
@@ -68,7 +61,6 @@ export {
   TableBody,
   TableRow,
   TableData,
-  HeaderRow,
   Header,
   Name,
   LastName,

@@ -4,7 +4,6 @@ import {
   TableBody,
   TableRow,
   TableData,
-  HeaderRow,
   Header,
   Name,
   LastName,
